@@ -2,9 +2,9 @@ from django.contrib import admin
 
 from .models import Question, Choice
 
-admin.site.site_header = "Pollster Admin"
-admin.site.site_title = "Pollster Admin Area"
-admin.site.index_title = "Welcome to the Pollster admin area"
+admin.site.site_header = "Indecisive Admin"
+admin.site.site_title = "Indecisive Admin Area"
+admin.site.index_title = "Welcome to the Indecisive admin area"
 
 
 class ChoiceInline(admin.TabularInline):
