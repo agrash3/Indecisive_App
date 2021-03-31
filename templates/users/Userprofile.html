@@ -31,4 +31,15 @@
 
     </div>
 
+<div <ul class='all_users'>
+  {% for users in allusers %}
+  {% if not user.is_superuser %}
+  {% if user not in request.user.friends.all and user≠request.user %}
+  <h1>{{user}} <a href="/send_friend_request/{{user.id}}/">send friend request</a></h1>
+  {% endif %}
+  {% endif %}
+  {% endfor %}
+</ul>
+</div>
+
 {% endblock %}
