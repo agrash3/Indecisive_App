@@ -20,6 +20,7 @@ djangorestframework = "*"
 django-rest-auth = "*"
 gunicorn = "*"
 django-heroku = "*"
+django-widget-tweaks = "*"
 
 [requires]
 python_version = "3.8"
