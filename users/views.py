@@ -3,7 +3,8 @@ from django.urls import reverse_lazy
 from django.views import generic
 from .forms import CustomUserCreationForm, CustomUserChangeForm
 from .models import CustomUser
-from django.contrib.auth import login 
+from django.contrib.auth import login, logout
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import PasswordChangeView, PasswordResetView
 
 class SignUpView(generic.CreateView):
@@ -32,22 +33,16 @@ class UserPasswordResetView(PasswordResetView):
     success_url = reverse_lazy('login')
     template_name = 'reset_password.html'
 
-def login_request(request):
-    if request.method == 'POST':
-        form = AuthenticationForm(request=request, data=request.POST)
-        if form.is_valid():
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
-            user = authenticate(username=username, password=password)
-            if user is not None:
+def login_user(request):
+    logout(request)
+    username = password = ''
+    if request.POST:
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            if user.is_active:
                 login(request, user)
-                messages.info(request, f"You are now logged in as {username}")
-                return redirect('/')
-            else:
-                messages.error(request, "Invalid username or password.")
-        else:
-            messages.error(request, "Invalid username or password.")
-    form = AuthenticationForm()
-    return render(request = request,
-                    template_name = "login.html",
-                    context={"form":form})
+                return HttpResponseRedirect('')
+    return render_to_response('login.html', context_instance=RequestContext(request))

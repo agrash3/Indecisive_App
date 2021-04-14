@@ -18,6 +18,8 @@ django-bootstrap-datepicker-plus = "*"
 django-bootstrap4 = "*"
 djangorestframework = "*"
 django-rest-auth = "*"
+gunicorn = "*"
+django-heroku = "*"
 
 [requires]
 python_version = "3.8"
