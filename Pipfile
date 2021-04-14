@@ -13,6 +13,11 @@ pytz = "==2020.1"
 sqlparse = "==0.3.1"
 Django = "==3.1.1"
 Pillow = "==7.2.0"
+python-dateutil = "*"
+django-bootstrap-datepicker-plus = "*"
+django-bootstrap4 = "*"
+djangorestframework = "*"
+django-rest-auth = "*"
 
 [requires]
 python_version = "3.8"
