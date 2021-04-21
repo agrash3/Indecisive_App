@@ -2,15 +2,16 @@
 from django.urls import reverse_lazy
 from django.views import generic
 from .forms import CustomUserCreationForm, CustomUserChangeForm
+from django.contrib.auth.forms import UserCreationForm
 from .models import CustomUser
-from django.contrib.auth import login, logout
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import PasswordChangeView, PasswordResetView
+from django.shortcuts import render, redirect
+from django.contrib.auth import login, authenticate
 
-class SignUpView(generic.CreateView):
-    form_class = CustomUserCreationForm
-    success_url = reverse_lazy('login')
-    template_name = 'registration/signup.html'
+def signup(response):
+    form = UserCreationForm()
+    return render(response, 'signup.html', {'form':form})
+
 
 class UserUpdateView(generic.UpdateView):
     form_class = CustomUserChangeForm
