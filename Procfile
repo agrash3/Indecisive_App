@@ -1,1 +1,1 @@
-web: gunicorn indecisice_app_updated.wsgi
+web: gunicorn indecisive_app_updated.wsgi
