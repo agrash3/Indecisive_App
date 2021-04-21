@@ -1,9 +1,5 @@
 from django.db import models
 <<<<<<< HEAD
-
-# Create your models here.
-=======
-<<<<<<< HEAD
 from django.contrib.auth.models import User
 from PIL import Image
 
@@ -45,4 +41,3 @@ class CustomUser(AbstractUser):
         age = relativedelta(date.today(), self.dob)
         return age.years
 >>>>>>> dd8e683bf902422332c15d70d55d3d53b3553e2d
->>>>>>> c915ff6c59d82525151f3696c383766d57fd83e2

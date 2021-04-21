@@ -1,14 +1,4 @@
 <<<<<<< HEAD
-# users/views.py
-from django.urls import reverse_lazy
-from django.views import generic
-from .forms import CustomUserCreationForm, CustomUserChangeForm
-from django.contrib.auth.forms import UserCreationForm
-from .models import CustomUser
-from django.contrib.auth.views import PasswordChangeView, PasswordResetView
-from django.shortcuts import render, redirect
-=======
-<<<<<<< HEAD
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import UserRegisterForm
@@ -63,7 +53,6 @@ from django.contrib.auth.forms import UserCreationForm
 from .models import CustomUser
 from django.contrib.auth.views import PasswordChangeView, PasswordResetView
 from django.shortcuts import render, redirect
->>>>>>> c915ff6c59d82525151f3696c383766d57fd83e2
 from django.contrib.auth import login, authenticate
 
 def signup(response):
@@ -73,22 +62,9 @@ def signup(response):
 
 class UserUpdateView(generic.UpdateView):
     form_class = CustomUserChangeForm
-<<<<<<< HEAD
-
-    
-          
-            
-          
-    
-    
-  
-    success_url = reverse_lazy('home')
-    template_name = 'update.html'
-=======
     success_url = reverse_lazy('home')
     template_name = 'update.html'
 
->>>>>>> c915ff6c59d82525151f3696c383766d57fd83e2
     # This keeps users from accessing the profile of other users.
     def get_queryset(self):
         user = self.request.user
@@ -96,14 +72,6 @@ class UserUpdateView(generic.UpdateView):
             return CustomUser.objects.all()
         else:
             return CustomUser.objects.filter(id=user.id)
-<<<<<<< HEAD
-class UserPasswordChangeView(PasswordChangeView):
-    success_url = reverse_lazy('home')
-    template_name = 'change_password.html'
-class UserPasswordResetView(PasswordResetView):
-    success_url = reverse_lazy('login')
-    template_name = 'reset_password.html'
-=======
 
 class UserPasswordChangeView(PasswordChangeView):
     success_url = reverse_lazy('home')
@@ -113,4 +81,3 @@ class UserPasswordResetView(PasswordResetView):
     success_url = reverse_lazy('login')
     template_name = 'reset_password.html'
 >>>>>>> dd8e683bf902422332c15d70d55d3d53b3553e2d
->>>>>>> c915ff6c59d82525151f3696c383766d57fd83e2

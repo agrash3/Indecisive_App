@@ -1,8 +1,5 @@
 {% load static %}
-<<<<<<< HEAD
-=======
 
->>>>>>> c915ff6c59d82525151f3696c383766d57fd83e2
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -10,17 +7,11 @@
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>{% block title %}{% endblock %}</title>
-<<<<<<< HEAD
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
-=======
 
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
 
->>>>>>> c915ff6c59d82525151f3696c383766d57fd83e2
 	</head>
 	<body>
 		<nav class="navbar navbar-default" role="navigation">
@@ -35,10 +26,7 @@
 					</button>
 					<a class="navbar-brand" href="{% url 'home' %}">Indecisive</a>
 				</div>
-<<<<<<< HEAD
-=======
 
->>>>>>> c915ff6c59d82525151f3696c383766d57fd83e2
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse navbar-ex1-collapse">
 					<ul class="nav navbar-nav">
@@ -49,9 +37,6 @@
 						{% endif %}
 					</ul>
 
-<<<<<<< HEAD
-	@@ -51,7 +50,7 @@
-=======
 					<ul class="nav navbar-nav">
 						{% if user.is_authenticated %}
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -62,7 +47,6 @@
           			aria-expanded="false">
               		Welcome {{ user.username }}
             		</a>
->>>>>>> c915ff6c59d82525151f3696c383766d57fd83e2
           		</li>
         		{% else %}
         		<li class="nav-item">
@@ -76,13 +60,6 @@
 				</div><!-- /.navbar-collapse -->
 			</div>
 		</nav>
-<<<<<<< HEAD
-		<div class="container">
-			{% block main %}{% endblock %}
-		</div>
-	</body>
-</html>
-=======
 
 		<div class="container">
 			{% block main %}{% endblock %}
@@ -90,4 +67,3 @@
 
 	</body>
 </html>
->>>>>>> c915ff6c59d82525151f3696c383766d57fd83e2

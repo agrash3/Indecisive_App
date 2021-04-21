@@ -1,10 +1,5 @@
 from django.contrib import admin
 <<<<<<< HEAD
-from .models import Polls
-
-admin.site.register(Polls)
-=======
-<<<<<<< HEAD
 
 from .models import Question, Choice
 
@@ -32,4 +27,3 @@ from .models import Polls
 
 admin.site.register(Polls)
 >>>>>>> dd8e683bf902422332c15d70d55d3d53b3553e2d
->>>>>>> c915ff6c59d82525151f3696c383766d57fd83e2
