@@ -1,1 +1,1 @@
-web: gunicorn tweeter_app.wsgi
+web: gunicorn indecisice_app_updated.wsgi
