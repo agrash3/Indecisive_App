@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
@@ -24,3 +25,23 @@ class ProfileUpdateForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['image']
+=======
+# users/forms.py
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from .models import CustomUser
+from django import forms
+from bootstrap_datepicker_plus import DatePickerInput
+
+class CustomUserCreationForm(UserCreationForm):
+    class Meta(UserCreationForm):
+        model = CustomUser
+        fields = UserCreationForm.Meta.fields + ('email', )
+
+class CustomUserChangeForm(UserChangeForm):
+    password = None
+
+    class Meta:
+        model = CustomUser
+        fields = ['username','email', 'first_name', 'last_name', 'dob', 'location' ]
+        widgets = { 'dob': DatePickerInput() }
+>>>>>>> dd8e683bf902422332c15d70d55d3d53b3553e2d

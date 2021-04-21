@@ -1,4 +1,5 @@
 from django.contrib import admin
+<<<<<<< HEAD
 
 from .models import Question, Choice
 
@@ -21,3 +22,8 @@ class QuestionAdmin(admin.ModelAdmin):
 # admin.site.register(Question)
 # admin.site.register(Choice)
 admin.site.register(Question, QuestionAdmin)
+=======
+from .models import Polls
+
+admin.site.register(Polls)
+>>>>>>> dd8e683bf902422332c15d70d55d3d53b3553e2d
