@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,12 +30,9 @@
       </div>
     </div>
   </body>
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
-{% load static %}
-
-
-<!DOCTYPE html>
-<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -67,6 +64,7 @@
 						{% if user.is_authenticated %}
 						<li><a href="{% url 'home' %}">Home</a></li>
 						<li><a href="{% url 'create' %}">Create</a></li>
+						<li><a href="{% url 'update_user' user.pk %}">Profile</a>
 						<li><a href="{% url 'logout' %}">Log Out</a>
 						{% endif %}
 					</ul>
@@ -84,6 +82,7 @@
           		</li>
         		{% else %}
         		<li class="nav-item">
+          		<a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
         		</li>
           		<li class="nav-item">
             		<a class="nav-link" href="{% url 'login' %}">Log In</a>
@@ -99,5 +98,9 @@
 		</div>
 
 	</body>
->>>>>>> dd8e683bf902422332c15d70d55d3d53b3553e2d
+>>>>>>> parent of dd8e683 (login enabled)
+=======
+>>>>>>> parent of 34d5ad8 (Merge branch 'master' of https://github.com/agrash3/Indecisive_App into master)
+=======
+>>>>>>> parent of 34d5ad8 (Merge branch 'master' of https://github.com/agrash3/Indecisive_App into master)
 </html>
