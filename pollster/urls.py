@@ -1,15 +1,72 @@
+<<<<<<< HEAD
+"""pollster URL Configuration
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/3.0/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+=======
+<<<<<<< HEAD
 
+>>>>>>> c915ff6c59d82525151f3696c383766d57fd83e2
 from django.contrib import admin
-from django.urls import include, path
-from django.conf import settings
-from django.conf.urls.static import static
+from django.urls import path, include
+from polls import views as polls_views
+from users import views as users_views
 
 urlpatterns = [
-    path('', include('pages.urls')),
-    path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
+<<<<<<< HEAD
+=======
     path('', include('users.urls')),
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+=======
+"""pollster URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/3.0/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+from django.contrib import admin
+from django.urls import path, include
+from polls import views as polls_views
+from users import views as users_views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+>>>>>>> c915ff6c59d82525151f3696c383766d57fd83e2
+    path('', polls_views.home, name='home'),
+    path('users/', include('django.contrib.auth.urls')),
+    path('create/', polls_views.create, name='create'),
+    path('vote/<poll_id>/', polls_views.vote, name='vote'),
+    path('results/<poll_id>/', polls_views.results, name='results'),
+    path('api/v1/', include('api.urls')),
+    path('api-auth/', include('rest_framework.urls')),
+    path('api/v1/rest-auth/', include('rest_auth.urls')),
+    path('signup/$', users_views.signup, name='signup'),
+<<<<<<< HEAD
+]
+=======
+]
+>>>>>>> dd8e683bf902422332c15d70d55d3d53b3553e2d
+>>>>>>> c915ff6c59d82525151f3696c383766d57fd83e2

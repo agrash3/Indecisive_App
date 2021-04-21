@@ -1,47 +1,10 @@
-<<<<<<< HEAD
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-=======
 <<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <title>Indecisive {% block title %}{% endblock %}</title>
-  </head>
-  <body>
-    <!-- NavBar -->
-    {% include 'partials/_navbar.html' %}
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 m-auto">
-          {% include 'partials/_messages.html' %}
-
-          {% block content %}{% endblock %}
-        </div>
-      </div>
-    </div>
-  </body>
 =======
-{% load static %}
 
-
-<!DOCTYPE html>
-<html lang="en">
 >>>>>>> c915ff6c59d82525151f3696c383766d57fd83e2
+<!DOCTYPE html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -82,13 +45,13 @@
 						{% if user.is_authenticated %}
 						<li><a href="{% url 'home' %}">Home</a></li>
 						<li><a href="{% url 'create' %}">Create</a></li>
-						<li><a href="{% url 'logout' %}">Log Out</a>
+						<li><a href="{% url 'logout' %}">Log Out</a></li>
 						{% endif %}
 					</ul>
-<<<<<<< HEAD
-	@@ -52,7 +51,6 @@
-=======
 
+<<<<<<< HEAD
+	@@ -51,7 +50,7 @@
+=======
 					<ul class="nav navbar-nav">
 						{% if user.is_authenticated %}
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -103,6 +66,7 @@
           		</li>
         		{% else %}
         		<li class="nav-item">
+							<a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
         		</li>
           		<li class="nav-item">
             		<a class="nav-link" href="{% url 'login' %}">Log In</a>
@@ -125,6 +89,5 @@
 		</div>
 
 	</body>
->>>>>>> dd8e683bf902422332c15d70d55d3d53b3553e2d
 </html>
 >>>>>>> c915ff6c59d82525151f3696c383766d57fd83e2

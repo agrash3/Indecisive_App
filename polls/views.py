@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
+
+from .forms import CreatePollForm
+from .models import Polls
+
+def home(request):
+    polls = Polls.objects.all()
+    context = {
+        'polls' : polls
+    }
+    return render(request, 'polls/home.html', context)
+
+def create(request):
+    if request.method == 'POST':
+        form = CreatePollForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+=======
+<<<<<<< HEAD
 from django.template import loader
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
@@ -62,3 +85,66 @@ def resultsData(request, obj):
         votedata.append({i.choice_text:i.votes})
 
     return JsonResponse(votedata, safe=False)
+=======
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
+
+from .forms import CreatePollForm
+from .models import Polls
+
+def home(request):
+    polls = Polls.objects.all()
+    context = {
+        'polls' : polls
+    }
+    return render(request, 'polls/home.html', context)
+
+def create(request):
+    if request.method == 'POST':
+        form = CreatePollForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+>>>>>>> c915ff6c59d82525151f3696c383766d57fd83e2
+        form = CreatePollForm()
+    context = {
+        'form' : form
+    }
+    return render(request, 'polls/create.html', context)
+
+def vote(request, poll_id):
+    poll = Polls.objects.get(pk=poll_id)
+
+    if request.method == 'POST':
+
+        selected_option = request.POST['poll']
+        if selected_option == 'option1':
+            poll.option_one_count += 1
+        elif selected_option == 'option2':
+            poll.option_two_count += 1
+        elif selected_option == 'option3':
+            poll.option_three_count += 1
+        else:
+            return HttpResponse(400, 'Invalid form')
+
+        poll.save()
+
+        return redirect('results', poll.id)
+
+    context = {
+        'poll' : poll
+    }
+    return render(request, 'polls/vote.html', context)
+
+def results(request, poll_id):
+    poll = Polls.objects.get(pk=poll_id)
+    context = {
+        'poll' : poll
+    }
+<<<<<<< HEAD
+    return render(request, 'polls/results.html', context)
+=======
+    return render(request, 'polls/results.html', context)
+>>>>>>> dd8e683bf902422332c15d70d55d3d53b3553e2d
+>>>>>>> c915ff6c59d82525151f3696c383766d57fd83e2
