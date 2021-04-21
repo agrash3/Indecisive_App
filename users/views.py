@@ -23,6 +23,7 @@ from .models import CustomUser
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import PasswordChangeView, PasswordResetView
+<<<<<<< HEAD
 
 class SignUpView(generic.CreateView):
     form_class = CustomUserCreationForm
@@ -33,6 +34,13 @@ class SignUpView(generic.CreateView):
     else:    # This is not a POST Request. We will just create a form
 
         form = UserRegisterForm()
+=======
+
+class SignUpView(generic.CreateView):
+    form_class = CustomUserCreationForm
+    success_url = reverse_lazy('login')
+    template_name = 'registration/signup.html'
+>>>>>>> parent of dd8e683 (login enabled)
 
     return render(request, 'users/UserRegister.html', {'form':form})
 
