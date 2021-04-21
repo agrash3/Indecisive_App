@@ -6,25 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-<<<<<<< HEAD
 django = "*"
-=======
-asgiref = "==3.2.10"
-django-cleanup = "==5.1.0"
-django-crispy-forms = "==1.9.2"
-pytz = "==2020.1"
-sqlparse = "==0.3.1"
-Django = "==3.1.1"
-Pillow = "==7.2.0"
-python-dateutil = "*"
-django-bootstrap-datepicker-plus = "*"
-django-bootstrap4 = "*"
-djangorestframework = "*"
-django-rest-auth = "*"
-gunicorn = "*"
-django-heroku = "*"
-django-widget-tweaks = "*"
->>>>>>> dd8e683bf902422332c15d70d55d3d53b3553e2d
 
 [requires]
 python_version = "3.8"

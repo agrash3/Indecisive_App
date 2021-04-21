@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 asgiref==3.3.1
 Django==3.1.3
 django-cleanup==5.1.0
@@ -6,12 +5,3 @@ django-crispy-forms==1.9.2
 Pillow==8.0.1
 pytz==2020.4
 sqlparse==0.4.1
-=======
-asgiref==3.2.10
-Django==3.1.1
-django-cleanup==5.1.0
-django-crispy-forms==1.9.2
-Pillow==7.2.0
-pytz==2020.1
-sqlparse==0.3.1
->>>>>>> dd8e683bf902422332c15d70d55d3d53b3553e2d
