@@ -18,6 +18,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 <<<<<<< HEAD
     path('', include('users.urls')),
+<<<<<<< HEAD
 =======
     path('', polls_views.home, name='home'),
     path('users/', include('users.urls')),
@@ -31,6 +32,8 @@ urlpatterns = [
 >>>>>>> parent of dd8e683 (login enabled)
 =======
 >>>>>>> parent of dd8e683 (login enabled)
+=======
+>>>>>>> parent of 34d5ad8 (Merge branch 'master' of https://github.com/agrash3/Indecisive_App into master)
 ]
 
 if settings.DEBUG:
