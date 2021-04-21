@@ -1,1 +1,1 @@
-web: gunicorn indecisive_app_updated.wsgi
+web: gunicorn pollster.wsgi
