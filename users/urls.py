@@ -1,6 +1,8 @@
 from django.urls import path, include
 from .views import SignUpView, UserUpdateView, UserPasswordChangeView, UserPasswordResetView
 from django.contrib.auth import views # new
+from . import views
+from django.conf import settings
 
 urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),

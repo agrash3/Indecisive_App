@@ -28,5 +28,5 @@ urlpatterns = [
     path('api/v1/', include('api.urls')),
     path('api-auth/', include('rest_framework.urls')),
     path('api/v1/rest-auth/', include('rest_auth.urls')),
-    path('signup/$', users_views.signup, name='signup'),
+    path('signup/', users_views.signup, name='signup'),
 ]
