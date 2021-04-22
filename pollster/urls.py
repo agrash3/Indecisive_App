@@ -1,5 +1,4 @@
 """pollster URL Configuration
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
 Examples:
@@ -28,5 +27,10 @@ urlpatterns = [
     path('api/v1/', include('api.urls')),
     path('api-auth/', include('rest_framework.urls')),
     path('api/v1/rest-auth/', include('rest_auth.urls')),
+<<<<<<< HEAD
     path('signup/', users_views.signup, name='signup'),
 ]
+=======
+    path('signup/$', users_views.signup, name='signup'),
+]
+>>>>>>> bb701322efbda1d8bf64c0f2f189fe194a17c03c
