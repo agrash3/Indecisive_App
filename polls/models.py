@@ -1,6 +1,7 @@
 from django.db import models
 
 class Polls(models.Model):
+    name = models.TextField()
     question = models.TextField()
     option_one = models.CharField(max_length=30)
     option_two = models.CharField(max_length=30)
