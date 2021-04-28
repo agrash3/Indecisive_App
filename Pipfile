@@ -22,6 +22,8 @@ gunicorn = "*"
 django-heroku = "*"
 django-widget-tweaks = "*"
 django-allauth = "*"
+yelpapi = "*"
+httplib2 = "*"
 
 [requires]
 python_version = "3.8"
