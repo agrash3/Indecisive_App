@@ -16,6 +16,7 @@ from django.contrib import admin
 from django.urls import path, include
 from polls import views as polls_views
 from users import views as users_views
+from restaurants import views as res_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,5 +28,8 @@ urlpatterns = [
     path('api/v1/', include('api.urls')),
     path('api-auth/', include('rest_framework.urls')),
     path('api/v1/rest-auth/', include('rest_auth.urls')),
+    path('api/v1/rest-auth/registration/', include('rest_auth.registration.urls')),
     path('signup/', users_views.signup, name='signup'),
+    path('restaurants/', res_views.find_restaurants, name='find_restaurants'),
+    path('restaurants_results', res_views.restaurants_results, name='restaurants_results'),
 ]

@@ -35,14 +35,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'rest_framework',
     'rest_framework.authtoken',
     'rest_auth',
+    'allauth', # new
+    'allauth.account', # new
+    'allauth.socialaccount',
+    'rest_auth.registration',
     'bootstrap4',
     'bootstrap_datepicker_plus',
     'polls',
     'widget_tweaks',
     'users',
+    'restaurants',
     'api',
 ]
 
@@ -78,6 +84,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'pollster.wsgi.application'
 
+SITE_ID = 1
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
@@ -136,6 +143,13 @@ BOOTSTRAP4 = { 'include_jquery': True }
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
+EMAIL_HOST = 'smtp.gmail.com' # new
+EMAIL_HOST_USER =  'grashoffaustin@gmail.com' # new
+EMAIL_HOST_PASSWORD = 'wraknjmxfouvktbs' # new
+EMAIL_PORT = 587 # new
+EMAIL_USE_TLS = True # new
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
